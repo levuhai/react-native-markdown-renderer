@@ -171,7 +171,9 @@ const renderRules = {
       return (
         <View key={node.key} style={styles.listUnorderedItem}>
           <Text style={styles.listUnorderedItemIcon}>{'\u00B7'}</Text>
-          <View style={[styles.listItem]}>{children}</View>
+          <View style={[styles.listItem, styles.listUnorderedItem]}>
+            {applyStyle(children, [styles.listUnorderedItemText], 'Text')}
+          </View>
         </View>
       );
     }
