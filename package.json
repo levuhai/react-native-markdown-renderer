@@ -1,5 +1,5 @@
 {
-  "name": "rnmd",
+  "name": "react-native-markdown",
   "version": "3.2.12",
   "description": "Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer).",
   "main": "src/index.js",
@@ -7,7 +7,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/alsotang/react-native-markdown-renderer.git"
+    "url": "https://github.com/martiano9/react-native-markdown-renderer.git"
   },
   "keywords": [
     "react",
@@ -28,10 +28,9 @@
     "@types/react-native": ">=0.50.0",
     "markdown-it": "^8.4.0",
     "prop-types": "^15.5.10",
-    "react-native-fit-image": "^1.5.2"
+    "react-native-fast-image": "^5.1.1"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "chokidar": "^2.0.0",
     "fs-extra": "^5.0.0"

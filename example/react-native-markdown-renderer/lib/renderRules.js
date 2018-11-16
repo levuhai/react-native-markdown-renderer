@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Text, TouchableWithoutFeedback, View } from 'react-native';
 
-import FitImage from 'react-native-fit-image';
+import FastImage from 'react-native-fast-image';
 import openUrl from './util/openUrl';
 import hasParents from './util/hasParents';
 import applyStyle from './util/applyStyle';
@@ -230,7 +230,7 @@ const renderRules = {
   // br
   softbreak: (node, children, parent, styles) => <Text key={node.key}>{'\n'}</Text>,
   image: (node, children, parent, styles) => {
-    return <FitImage indicator={true} key={node.key} style={styles.image} source={{ uri: node.attributes.src }} />;
+    return <FastImage resizeMode={FastImage.resizeMode.contain} key={node.key} style={styles.image} source={{ uri: node.attributes.src }} />;
   },
 };
 
