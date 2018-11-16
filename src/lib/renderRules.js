@@ -230,7 +230,14 @@ const renderRules = {
   // br
   softbreak: (node, children, parent, styles) => <Text key={node.key}>{'\n'}</Text>,
   image: (node, children, parent, styles) => {
-    return <FastImage resizeMode={FastImage.resizeMode.contain} key={node.key} style={styles.image} source={{ uri: node.attributes.src }} />;
+    const parts = node.attributes.src.split('=');
+    let sizeStyle = {};
+    if (parts.length === 2) {
+      const w = parts[1].split('x')[0];
+      const h = parts[1].split('x')[1];
+      sizeStyle = {width: w, height: h};
+    }
+    return <FastImage resizeMode={FastImage.resizeMode.contain} key={node.key} style={[styles.image, sizeStyle]} source={{ uri: parts[0] }} />;
   },
 };
 
