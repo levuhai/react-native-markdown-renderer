@@ -235,7 +235,7 @@ const renderRules = {
     if (parts.length === 2) {
       const w = parts[1].split('x')[0];
       const h = parts[1].split('x')[1];
-      sizeStyle = {width: w, height: h};
+      sizeStyle = {width: parseInt(w), height: parseInt(h)};
     }
     return <FastImage resizeMode={FastImage.resizeMode.contain} key={node.key} style={[styles.image, sizeStyle]} source={{ uri: parts[0] }} />;
   },
